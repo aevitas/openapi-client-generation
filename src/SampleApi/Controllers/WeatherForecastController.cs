@@ -23,7 +23,7 @@ namespace SampleApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet("")]
+        [HttpGet("", Name = nameof(Get))]
         [ProducesResponseType(typeof(WeatherForecast[]), StatusCodes.Status200OK)]
         public IEnumerable<WeatherForecast> Get()
         {
